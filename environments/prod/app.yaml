@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-app-prod
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: app=docker.io/gamertech1/bank-app-argo-cd
+    argocd-image-updater.argoproj.io/app.helm.image-name: image.repository
+    argocd-image-updater.argoproj.io/app.helm.image-tag: image.tag
+    argocd-image-updater.argoproj.io/write-back-method: git
+spec:
+  project: default
+
+  source:
+    repoURL: git@github.com:gamertech1/bank-app-helm-config-argo-cd.git
+    targetRevision: HEAD
+    path: myapp/microservice-1
+    helm:
+      valueFiles:
+        - ../../environments/prod/values.yaml
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: prod
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
