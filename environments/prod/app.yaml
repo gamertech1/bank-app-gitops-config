@@ -17,7 +17,7 @@ spec:
     path: myapp/microservice-1
     helm:
       valueFiles:
-        - ../../environments/prod/values.yaml
+        - $values/environments/prod/values.yaml
 
   destination:
     server: https://kubernetes.default.svc
