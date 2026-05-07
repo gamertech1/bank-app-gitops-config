@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   source:
-    repoURL: https://github.com/gamertech1/bank-app-gitops-config.git
+    repoURL: git@github.com:gamertech1/bank-app-gitops-config.git
     path: environments
     targetRevision: HEAD
 
