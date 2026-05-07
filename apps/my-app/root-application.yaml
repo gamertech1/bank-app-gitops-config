@@ -9,6 +9,8 @@ spec:
     repoURL: git@github.com:gamertech1/bank-app-gitops-config.git
     path: environments
     targetRevision: HEAD
+    directory:
+      recurse: true
 
   destination:
     server: https://kubernetes.default.svc
