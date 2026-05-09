@@ -1,8 +1,10 @@
 helm:
   parameters:
-  - name: image.repository
-    value: gamertech1/bank-app-argo-cd
-    forcestring: true
-  - name: image.tag
-    value: 20260508091927-bd72890
-    forcestring: true
+    - name: image.repository
+      value: gamertech1/bank-app-argo-cd
+      forcestring: true
+    - name: image.tag
+      value: 20260508091927-bd72890
+      forcestring: true
+image:
+  tag: ""
