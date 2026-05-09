@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   repository: gamertech1/bank-app-argo-cd
   pullPolicy: IfNotPresent
-  tag: ""
+  tag: "20260509124006-b52668c"
 service:
   type: ClusterIP
   port: 80
