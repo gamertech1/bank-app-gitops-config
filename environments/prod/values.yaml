@@ -1,26 +1,18 @@
 replicaCount: 2
-
 image:
   repository: gamertech1/bank-app-argo-cd
   pullPolicy: IfNotPresent
-  tag: latest
-
+  tag: ""
 container:
   port: 8081
-
 service:
   type: ClusterIP
   port: 80
-
 fullnameOverride: ""
-
 labels:
   app: microservice-1
   version: "1.0"
-
 selectorLabels:
   app: microservice-1
-
 podAnnotations: {}
-
 podLabels: {}
