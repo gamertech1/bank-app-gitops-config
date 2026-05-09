@@ -26,7 +26,6 @@ spec:
     - repoURL: git@github.com:gamertech1/bank-app-gitops-config.git
       targetRevision: HEAD
       ref: values
-      path: environments/dev
 
   destination:
     server: https://kubernetes.default.svc
