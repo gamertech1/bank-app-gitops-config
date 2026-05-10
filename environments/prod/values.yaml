@@ -3,7 +3,7 @@ revisionHistoryLimit: 2
 image:
   repository: gamertech1/bank-app-argo-cd
   pullPolicy: IfNotPresent
-  tag: "20260510131219-cccd08a"
+  tag: "20260510135956-cd72fc6"
 container:
   port: 8080
 service:
